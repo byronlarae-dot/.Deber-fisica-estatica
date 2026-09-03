@@ -3,192 +3,177 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manual Técnico: Estática y Mecánica Vectorial</title>
+<title>Temas de Estática y Mecánica Vectorial | Física</title>
 
 <style>
 *{box-sizing:border-box;scroll-behavior:smooth}
 
 body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  background:#090d16;
-  color:#e2e8f0;
-  line-height:1.7
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#07111f;
+color:#eaf4ff;
+line-height:1.65
 }
 
 header{
-  min-height:75vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:50px 20px;
-  background:radial-gradient(circle at 50% 20%, #1e1b4b, #090d16 80%)
+min-height:78vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:40px 20px;
+background:linear-gradient(135deg,#07111f,#0b2440)
 }
 
-.hero{max-width:850px}
+.hero{max-width:900px}
 
 .badge{
-  display:inline-block;
-  border:1px solid #6366f1;
-  background:#6366f115;
-  border-radius:30px;
-  padding:6px 18px;
-  color:#a5b4fc;
-  font-size:0.85rem;
-  letter-spacing:1px;
-  font-weight:700;
-  margin-bottom:20px
+display:inline-block;
+border:1px solid #38a9ff;
+border-radius:30px;
+padding:7px 16px;
+color:#79c8ff;
+margin-bottom:20px
 }
 
 h1{
-  font-size:clamp(2.4rem,6vw,4.5rem);
-  margin:0 0 16px;
-  color:#f8fafc;
-  line-height:1.15
+font-size:clamp(2.5rem,7vw,5rem);
+margin:0 0 15px;
+color:#fff
 }
 
 .hero p{
-  font-size:1.15rem;
-  color:#94a3b8;
-  max-width:650px;
-  margin:0 auto 30px
+font-size:1.15rem;
+color:#b9d5eb;
+max-width:700px;
+margin:0 auto 28px
 }
 
 .btn{
-  display:inline-block;
-  background:linear-gradient(135deg,#4f46e5,#06b6d4);
-  color:white;
-  text-decoration:none;
-  padding:14px 28px;
-  border-radius:12px;
-  font-weight:600;
-  transition:transform .2s ease;
-  box-shadow:0 8px 20px #4f46e530
+display:inline-block;
+background:#1597ee;
+color:white;
+text-decoration:none;
+padding:12px 22px;
+border-radius:10px;
+font-weight:bold
 }
 
-.btn:hover{transform:translateY(-2px)}
-
 nav{
-  position:sticky;
-  top:0;
-  z-index:20;
-  background:#090d16cc;
-  border-bottom:1px solid #1e293b;
-  backdrop-filter:blur(12px);
-  padding:12px 16px
+position:sticky;
+top:0;
+z-index:10;
+background:#091827ee;
+border-bottom:1px solid #173b5c;
+backdrop-filter:blur(8px);
+padding:12px
 }
 
 nav div{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  gap:10px;
-  overflow-x:auto
+max-width:1100px;
+margin:auto;
+display:flex;
+gap:8px;
+overflow-x:auto
 }
 
 nav a{
-  color:#94a3b8;
-  text-decoration:none;
-  white-space:nowrap;
-  padding:8px 14px;
-  border-radius:8px;
-  font-size:0.9rem;
-  transition:all .2s
+color:#bfe2ff;
+text-decoration:none;
+white-space:nowrap;
+padding:8px 12px;
+border-radius:8px
 }
 
 nav a:hover{
-  background:#1e293b;
-  color:#38bdf8
+background:#123b5d;
+color:white
 }
 
 main{
-  max-width:980px;
-  margin:auto;
-  padding:40px 20px
+max-width:1050px;
+margin:auto;
+padding:35px 18px
 }
 
 .intro{
-  background:#0f172a;
-  border:1px solid #1e293b;
-  border-radius:16px;
-  padding:28px;
-  margin-bottom:30px
+background:#0b1c2e;
+border:1px solid #173b5c;
+border-radius:16px;
+padding:25px;
+margin-bottom:25px
 }
 
 section{
-  background:#0f172a;
-  border:1px solid #1e293b;
-  border-radius:18px;
-  padding:32px;
-  margin:30px 0;
-  box-shadow:0 10px 30px #00000040
+background:#0b1c2e;
+border:1px solid #173b5c;
+border-radius:16px;
+padding:28px;
+margin:25px 0;
+box-shadow:0 8px 25px #0003
 }
 
 .num{
-  color:#38bdf8;
-  font-weight:700;
-  font-size:.85rem;
-  letter-spacing:1px;
-  text-transform:uppercase
+color:#50baff;
+font-weight:bold;
+font-size:.95rem
 }
 
 h2{
-  margin:8px 0 16px;
-  font-size:1.75rem;
-  color:#f1f5f9
+margin:5px 0 15px;
+font-size:1.8rem;
+color:#fff
 }
 
-h3{color:#818cf8;margin-top:0}
+h3{
+color:#7bcaff
+}
 
 .formula{
-  display:inline-block;
-  background:#020617;
-  border-left:4px solid #38bdf8;
-  border-radius:6px;
-  padding:10px 18px;
-  margin:10px 0;
-  color:#38bdf8;
-  font-family:monospace;
-  font-size:1.15rem;
-  letter-spacing:0.5px
+display:inline-block;
+background:#06101c;
+border:1px solid #247ab3;
+border-radius:10px;
+padding:10px 18px;
+margin:8px 0;
+color:#8bd1ff;
+font-weight:bold;
+font-size:1.1rem
 }
 
 .formula-box{
-  background:#070d19;
-  border:1px solid #1e293b;
-  border-radius:12px;
-  padding:20px;
-  margin:20px 0
+background:#081725;
+border:1px solid #247ab3;
+border-radius:14px;
+padding:18px;
+margin:18px 0
 }
 
-.formula-box p{margin:6px 0;color:#cbd5e1}
-
-.callout{
-  background:#1e1b4b30;
-  border-left:3px solid #818cf8;
-  padding:12px 18px;
-  margin:16px 0;
-  border-radius:0 8px 8px 0;
-  font-size:0.95rem;
-  color:#c7d2fe
+.formula-box h3{
+margin-top:0
 }
 
-ul{padding-left:20px;color:#cbd5e1}
-li{margin-bottom:6px}
+.formula-box p{
+margin:7px 0
+}
+
+ul{
+padding-left:22px
+}
 
 footer{
-  text-align:center;
-  padding:40px 20px;
-  color:#64748b;
-  border-top:1px solid #1e293b;
-  margin-top:40px
+text-align:center;
+padding:35px 15px;
+color:#91acc2;
+border-top:1px solid #173b5c;
+margin-top:35px
 }
 
 @media(max-width:600px){
-  section{padding:22px}
-  h1{font-size:2.2rem}
-  h2{font-size:1.4rem}
+section{padding:21px}
+.hero p{font-size:1rem}
+h2{font-size:1.45rem}
 }
 </style>
 </head>
@@ -196,179 +181,276 @@ footer{
 <body>
 
 <header id="inicio">
-  <div class="hero">
-    <div class="badge">FÍSICA NEWTONIANA • MECÁNICA VECTORIAL</div>
-    <h1>Estática y Equilibrio</h1>
-    <p>Compendio técnico de leyes fundamentales, análisis vectorial de fuerzas, momentos y condiciones de equilibrio rígido.</p>
-    <a class="btn" href="#temas">Explorar Conceptos</a>
-  </div>
+<div class="hero">
+<div class="badge">FÍSICA • MECÁNICA VECTORIAL</div>
+<h1>Temas de Estática</h1>
+<p>Guía analítica integral: leyes de Newton, equilibrio de partículas, análisis de cuerpos rígidos, fricción de Coulomb y centros de gravedad.</p>
+<a class="btn" href="#temas">Ver los temas</a>
+</div>
 </header>
 
 <nav>
-  <div>
-    <a href="#inicio">Inicio</a>
-    <a href="#tema1">1. Estática</a>
-    <a href="#tema2">2. Leyes de Newton</a>
-    <a href="#tema3">3. Fuerza y Peso</a>
-    <a href="#tema4">4. Acción y Reacción</a>
-    <a href="#tema5">5. Fricción</a>
-    <a href="#tema6">6. Partícula</a>
-    <a href="#tema7">7. Cuerpo Rígido</a>
-    <a href="#tema8">8. Centro de Gravedad</a>
-    <a href="#tema9">9. Formulario</a>
-  </div>
+<div>
+<a href="#inicio">Inicio</a>
+<a href="#tema1">1. Estática</a>
+<a href="#tema2">2. Newton</a>
+<a href="#tema3">3. Fuerza y peso</a>
+<a href="#tema4">4. Acción y reacción</a>
+<a href="#tema5">5. Rozamiento</a>
+<a href="#tema6">6. Partícula</a>
+<a href="#tema7">7. Cuerpo rígido</a>
+<a href="#tema8">8. Centro de gravedad</a>
+<a href="#tema9">9. Fórmulas</a>
+</div>
 </nav>
 
 <main id="temas">
 
 <div class="intro">
-  <h2>📘 Fundamento Teórico</h2>
-  <p>Este recurso compila el análisis vectorial de sistemas en reposo y en velocidad rectilínea uniforme, con base en los principios de mecánica vectorial.</p>
+<h2>📘 ¿Qué encontrarás aquí?</h2>
+<p>En este compendio se desarrollan los principios teóricos de la estática clásica junto a sus deducciones vectoriales, condiciones de equilibrio traslacional y rotacional, y un formulario analítico final para la resolución formal de ejercicios físicos.</p>
 </div>
 
 <section id="tema1">
-  <span class="num">Módulo 01</span>
-  <h2>1. Naturaleza de la Estática</h2>
-  <p>La estática es la rama de la mecánica clásica que estudia el estado de equilibrio de los cuerpos bajo la acción de fuerzas exteriores. Se define que un sistema se encuentra en <strong>equilibrio mecánico</strong> cuando su aceleración lineal y su aceleración angular son estrictamente nulas:</p>
-  
-  <div class="formula">a = 0 &nbsp;|&nbsp; α = 0</div>
+<span class="num">TEMA 01</span>
+<h2>1. LA ESTÁTICA</h2>
 
-  <p>Esto engloba dos escenarios:</p>
-  <ul>
-    <li><strong>Equilibrio estático:</strong> El cuerpo permanece en reposo absoluto respecto a un marco de referencia inercial.</li>
-    <li><strong>Equilibrio dinámico:</strong> El cuerpo se desplaza en línea recta a velocidad constante (v = constante).</li>
-  </ul>
-  <p>Su herramienta indispensable es el <strong>Diagrama de Cuerpo Libre (DCL)</strong>, que aísla el cuerpo eliminando soportes y reemplazándolos por sus correspondientes fuerzas y reacciones vectoriales.</p>
+<p>La estática es la rama de la mecánica clásica orientada al estudio de las condiciones bajo las cuales un cuerpo o sistema material permanece en equilibrio. Físicamente, un estado de equilibrio se define por la ausencia total de aceleración (lineal y angular). Por lo tanto, un sistema estático no se limita al reposo absoluto (equilibrio estático), sino que también comprende el desplazamiento rectilíneo a velocidad constante (equilibrio dinámico).</p>
+
+<p>A diferencia de la cinemática, la estática evalúa directamente las causas de las interacciones: analiza cómo actúan los sistemas de fuerzas concurrentes, paralelas y no concurrentes, y establece los vínculos necesarios para impedir que ocurran deformaciones macroscópicas o desplazamientos no controlados.</p>
+
+<p>Para su formulación analítica se clasifican las fuerzas en exteriores (como cargas vivas, cargas muertas, tensiones en cables o reacciones de apoyo) e interiores (esfuerzos axiales, cortantes y momentos flectores que mantienen unidas las partes de una estructura). Cada una de estas magnitudes es un vector con módulo, punto de aplicación, línea de acción y sentido.</p>
+
+<p>Cuando un conjunto de fuerzas actúa sobre un cuerpo, el objetivo fundamental es determinar la fuerza resultante. Si la resultante y el momento resultante del sistema son idénticamente nulos, el cuerpo satisface las condiciones de estabilidad mecánica.</p>
+
+<p>El campo de aplicación abarca el diseño y dimensionamiento de armaduras, vigas, muros de contención, grúas y puentes colgantes. La herramienta gráfica y analítica indispensable para aislar el sistema es el Diagrama de Cuerpo Libre (DCL), en el cual se retiran todos los apoyos y restricciones para reemplazarlos formalmente por sus fuerzas de reacción correspondientes.</p>
 </section>
 
 <section id="tema2">
-  <span class="num">Módulo 02</span>
-  <h2>2. Fundamentación Newtoniana</h2>
-  <p>Las tres leyes enunciadas por Sir Isaac Newton en 1687 sustentan todo el análisis mecánico:</p>
-  <ul>
-    <li><strong>Primera Ley (Ley de Inercia):</strong> Todo cuerpo persevera en su estado de reposo o movimiento rectilíneo uniforme a menos que sea obligado a cambiar su estado por fuerzas netas aplicadas sobre él (ΣF⃗ = 0 ⟹ v⃗ = cte).</li>
-    <li><strong>Segunda Ley (Ley Fundamental de la Dinámica):</strong> La aceleración que adquiere un cuerpo es directamente proporcional a la fuerza neta aplicada e inversamente proporcional a su masa inercial (ΣF⃗ = m · a⃗). En estática, dado que a⃗ = 0, esta ley converge a la Primera Ley.</li>
-    <li><strong>Tercera Ley (Principio de Acción y Reacción):</strong> A toda acción se opone siempre una reacción igual y contraria. Las fuerzas son interacciones mutuas y jamás existen de forma aislada.</li>
-  </ul>
+<span class="num">TEMA 02</span>
+<h2>2. LAS LEYES DE NEWTON</h2>
+
+<p>Formuladas por Sir Isaac Newton en su obra <em>Philosophiae Naturalis Principia Mathematica</em> (1687), estas leyes proporcionan la base axiomática para describir la relación fundamental entre las fuerzas aplicadas sobre una masa y la variación de su estado de movimiento dentro de marcos de referencia inerciales.</p>
+
+<p>La Primera Ley (Principio de Inercia) establece que un cuerpo mantiene su estado de reposo relativo o de movimiento rectilíneo uniforme a menos que una fuerza externa resultante no equilibrada lo fuerce a modificar dicho estado. En el contexto de la estática, esta ley dictamina que si la sumatoria neta de fuerzas exteriores es cero, la aceleración es necesariamente nula.</p>
+
+<p>La Segunda Ley (Principio Fundamental de la Dinámica) postula que la aceleración adquirida por un cuerpo es directamente proporcional a la fuerza neta resultante que obra sobre él y posee su misma dirección y sentido:</p>
+
+<div class="formula">F = m · a</div>
+
+<p>En el campo estático, dado que la condición restrictiva obliga a que la aceleración sea cero (a = 0), la ecuación vectorial resultante se simplifica directamente al equilibrio estático generalizado (ΣF = 0).</p>
+
+<p>La Tercera Ley (Principio de Acción y Reacción) señala que las fuerzas son siempre el resultado de una interacción mutua entre pares de cuerpos: si un cuerpo A ejerce una fuerza sobre un cuerpo B, este último responde con una fuerza de magnitud idéntica y en la misma dirección, pero en sentido opuesto sobre A.</p>
 </section>
 
 <section id="tema3">
-  <span class="num">Módulo 03</span>
-  <h2>3. Dinámica de Fuerzas: Masa vs. Peso</h2>
-  <p>Una <strong>fuerza</strong> es una magnitud vectorial caracterizada por un punto de aplicación, magnitud, dirección y sentido, medida en newtons (1 N = 1 kg·m/s²).</p>
-  
-  <div class="callout">
-    <strong>Diferenciación crítica:</strong> La <em>masa</em> (m) es una propiedad escalar e invariable que mide la inercia de la materia (en kg). El <em>peso</em> (W⃗ o P⃗) es la fuerza gravitacional ejercida sobre dicha masa, variando según la posición espacial y la altitud.
-  </div>
+<span class="num">TEMA 03</span>
+<h2>3. LA FUERZA Y EL PESO</h2>
 
-  <div class="formula">W⃗ = m · g⃗</div>
-  <p>Donde g ≈ 9,81 m/s² al nivel del mar. La línea de acción del peso se proyecta verticalmente hacia el centro de gravedad del planeta.</p>
+<p>Una fuerza es una interacción vectorial capaz de alterar la cantidad de movimiento de un cuerpo, inducir una aceleración o provocar deformaciones elásticas o plásticas. En el Sistema Internacional de Unidades (SI), la fuerza se mide en newtons (N), donde 1 N equivale a la fuerza que imparte una aceleración de 1 m/s² a una masa de 1 kg (1 N = 1 kg·m/s²).</p>
+
+<p>Es indispensable mantener la diferenciación física entre masa y peso. La masa es una propiedad escalar e intrínseca de la materia que cuantifica su inercia frente a los cambios de velocidad. El peso, por el contrario, es una magnitud vectorial generada por la atracción del campo gravitatorio terrestre sobre dicha masa.</p>
+
+<p>El peso se cuantifica mediante la relación fundamental:</p>
+
+<div class="formula">P = m · g</div>
+
+<p>El vector de la aceleración gravitacional estándar en la superficie terrestre se toma convencionalmente como g = 9,81 m/s² (dirigido hacia el centro geométrico del planeta). A diferencia de la masa, el peso varía de acuerdo con la latitud y la altitud del lugar geográfico donde se encuentre el objeto.</p>
 </section>
 
 <section id="tema4">
-  <span class="num">Módulo 04</span>
-  <h2>4. Principio de Acción y Reacción en Estática</h2>
-  <p>El principio de interacción impone dos condiciones estrictas para los pares de acción y reacción:</p>
-  <ul>
-    <li>Poseen exactamente la misma magnitud y línea de acción, pero sentidos opuestos (F⃗<sub>AB</sub> = -F⃗<sub>BA</sub>).</li>
-    <li><strong>Actúan sobre cuerpos distintos:</strong> Razón por la cual nunca se anulan entre sí dentro del DCL de un solo cuerpo.</li>
-  </ul>
-  <p>Por ejemplo, la fuerza Normal (N) sobre una mesa no es la reacción al peso del objeto (el par del peso está en el núcleo terrestre), sino la reacción a la compresión mecánica que el objeto ejerce sobre la superficie de la mesa.</p>
+<span class="num">TEMA 04</span>
+<h2>4. PRINCIPIO DE ACCIÓN Y REACCIÓN DE LOS CUERPOS</h2>
+
+<p>El principio de interacción de la Tercera Ley de Newton impone restricciones determinantes en el planteamiento de sistemas de fuerzas. La propiedad fundamental de este principio es que las fuerzas que conforman un par de acción y reacción nunca actúan sobre el mismo cuerpo, sino sobre cuerpos distintos que interactúan entre sí.</p>
+
+<p>Al no actuar sobre la misma entidad física, estas fuerzas jamás pueden anularse mutuamente dentro del diagrama de cuerpo libre de un único objeto. Por ejemplo, al apoyar un bloque sobre una mesa, la fuerza que ejerce el bloque sobre la superficie de la mesa y la fuerza normal que la mesa devuelve sobre la base del bloque constituyen el par de contacto; el peso del bloque interactúa por separado con el centro de la Tierra.</p>
+
+<p>Este principio rige el funcionamiento de todas las uniones mecánicas, apoyos simples, articulaciones fijas, patines de rodadura, tensiones de cables en poleas y la sustentación en estructuras estáticas.</p>
 </section>
 
 <section id="tema5">
-  <span class="num">Módulo 05</span>
-  <h2>5. Tribología: Fricción Seca (Modelo de Coulomb)</h2>
-  <p>La resistencia tangencial entre dos superficies rugosas en contacto se divide en dos regímenes:</p>
-  
-  <p><strong>1. Fricción Estática (f<sub>s</sub>):</strong> Fuerza de autoajuste que equilibra la fuerza aplicada mientras no haya deslizamiento. Su valor es una desigualdad:</p>
-  <div class="formula">f<sub>s</sub> ≤ μ<sub>s</sub> · N</div>
-  <p>El valor máximo antes del movimiento inminente es f<sub>s,max</sub> = μ<sub>s</sub> · N.</p>
+<span class="num">TEMA 05</span>
+<h2>5. LA FUERZA DE ROZAMIENTO</h2>
 
-  <p><strong>2. Fricción Cinética (f<sub>k</sub>):</strong> Actúa una vez iniciado el deslizamiento relativo:</p>
-  <div class="formula">f<sub>k</sub> = μ<sub>k</sub> · N</div>
-  <p>Generalmente, μ<sub>s</sub> > μ<sub>k</sub> debido a que romper las uniones microscópicas iniciales requiere mayor esfuerzo que mantener el deslizamiento.</p>
+<p>La fuerza de rozamiento o fricción es la fuerza tangencial que se opone al deslizamiento relativo entre dos superficies en contacto o a la tendencia inminente a dicho movimiento. Su origen reside en las micro-asperezas, adherencias microscópicas e interacciones moleculares entre las caras en contacto.</p>
+
+<p>En el régimen estático, la fricción es una fuerza de autoajuste: su valor se equilibra de forma exacta con la componente de la fuerza aplicada paralela a la superficie, hasta alcanzar un límite superior conocido como fricción estática máxima:</p>
+
+<div class="formula">Fr(max) = µs · N</div>
+
+<p>Una vez superado este límite crítico, se rompen los enlaces microscópicos, sobreviene el movimiento relativo y entra en vigor el rozamiento cinético, cuyo valor se mantiene relativamente constante:</p>
+
+<div class="formula">Fr = µk · N</div>
+
+<p>Donde µ representa el coeficiente adimensional de rozamiento (dependiente de la naturaleza rugosa y composición de los materiales en contacto) y N corresponde a la magnitud de la fuerza normal de reacción. Experimentalmente se cumple siempre que el coeficiente estático es mayor que el cinético (µs > µk).</p>
 </section>
 
 <section id="tema6">
-  <span class="num">Módulo 06</span>
-  <h2>6. Equilibrio de una Partícula</h2>
-  <p>Una partícula es un cuerpo cuyas dimensiones espaciales son despreciables frente a la escala del problema; por ello, <strong>no experimenta rotación</strong>. La única condición necesaria es el equilibrio de traslación:</p>
-  <div class="formula">ΣF⃗ = 0⃗</div>
+<span class="num">TEMA 06</span>
+<h2>6. EQUILIBRIO DE UNA PARTÍCULA</h2>
 
-  <p>En el plano bidimensional (xy):</p>
-  <div class="formula">ΣF<sub>x</sub> = 0 &nbsp;&nbsp;|&nbsp;&nbsp; ΣF<sub>y</sub> = 0</div>
-  <p>Gráficamente, el polígono vectorial cerrado formado por todas las fuerzas aplicadas garantiza el equilibrio concurrente.</p>
+<p>En mecánica vectorial, una partícula se define como una entidad material cuyas dimensiones físicas son despreciables en comparación con las escalas geométricas del problema analizado. Al concentrarse toda la masa en un solo punto matemático, las líneas de acción de todas las fuerzas actuantes concurren forzosamente en dicho punto.</p>
+
+<p>Al carecer de dimensiones espaciales extensas, una partícula no experimenta efectos de rotación ni torques. Por lo tanto, la condición necesaria y suficiente para que se encuentre en equilibrio es que la fuerza resultante vectorial sea idénticamente nula (ΣF = 0).</p>
+
+<p>En un sistema bidimensional (plano cartesiano xy), esta condición vectorial se descompone en dos ecuaciones algebraicas simultáneas e independientes:</p>
+
+<div class="formula">ΣFx = 0</div>
+
+<br>
+
+<div class="formula">ΣFy = 0</div>
+
+<p>El método gráfico de resolución requiere que el polígono vectorial conformado por las fuerzas concurrentes sea cerrado, lo que valida formalmente que el sistema se mantiene en reposo sin aceleraciones traslacionales.</p>
 </section>
 
 <section id="tema7">
-  <span class="num">Módulo 07</span>
-  <h2>7. Equilibrio del Cuerpo Rígido</h2>
-  <p>Un cuerpo rígido no se deforma bajo la acción de cargas externas. Para garantizar su reposo total, deben satisfacerse simultáneamente dos condiciones:</p>
-  
-  <p><strong>Primera Condición (Traslacional):</strong></p>
-  <div class="formula">ΣF⃗ = 0⃗</div>
-  
-  <p><strong>Segunda Condición (Rotacional):</strong></p>
-  <div class="formula">ΣM⃗<sub>O</sub> = 0⃗</div>
-  
-  <p>Donde M⃗<sub>O</sub> es el <strong>momento de fuerza o torque</strong> respecto a un punto O, definido por el producto vectorial:</p>
-  <div class="formula">M⃗<sub>O</sub> = r⃗ × F⃗</div>
-  <p>Escalarmente: M = F · d, donde d es el brazo de palanca (distancia perpendicular). Por convención habitual: giros antihorarios (+) y giros horarios (-).</p>
+<span class="num">TEMA 07</span>
+<h2>7. EQUILIBRIO DE UN CUERPO RÍGIDO</h2>
+
+<p>Un cuerpo rígido es un modelo mecánico idealizado donde se asume que las distancias relativas entre todos los puntos que lo componen permanecen invariables frente a la aplicación de cargas exteriores (no se presentan deformaciones estructurales perceptibles).</p>
+
+<p>Para lograr el equilibrio integral de un cuerpo rígido no basta con anular las fuerzas lineales; se deben satisfacer simultáneamente las dos condiciones de equilibrio: traslacional y rotacional:</p>
+
+<div class="formula">ΣF = 0</div>
+
+<br>
+
+<div class="formula">ΣM = 0</div>
+
+<p>El momento de una fuerza (también denominado torque) cuantifica la tendencia o capacidad de dicha fuerza para producir una rotación alrededor de un eje o punto de giro. Su valor escalar equivale al producto de la magnitud de la fuerza por el brazo de palanca:</p>
+
+<div class="formula">M = F · d</div>
+
+<p>Donde d corresponde a la distancia perpendicular trazada desde el eje de giro hasta la línea de acción de la fuerza. Por convención habitual de signos, los momentos que inducen rotaciones en sentido antihorario se consideran positivos (+), y aquellos en sentido horario, negativos (-).</p>
 </section>
 
 <section id="tema8">
-  <span class="num">Módulo 08</span>
-  <h2>8. Centro de Gravedad, Centro de Masa y Centroide</h2>
-  <ul>
-    <li><strong>Centro de Gravedad (CG):</strong> Punto de aplicación de la resultante de todas las fuerzas gravitatorias que actúan sobre las masas elementales del cuerpo.</li>
-    <li><strong>Centro de Masa (CM):</strong> Punto geométrico donde se concentra toda la inercia del sistema (r⃗<sub>CM</sub> = Σ(m<sub>i</sub> · r⃗<sub>i</sub>) / Σm<sub>i</sub>). Si el campo gravitacional es uniforme, el CG coincide exactamente con el CM.</li>
-    <li><strong>Centroide:</strong> Punto puramente geométrico (centro de un área o volumen), independiente de la masa o la gravedad.</li>
-  </ul>
-  <p><strong>Criterio de Estabilidad:</strong> Un cuerpo rígido no vuelca mientras la línea de acción vertical que desciende de su CG cruce dentro del polígono delimitado por su base de sustentación.</p>
+<span class="num">TEMA 08</span>
+<h2>8. CENTRO DE GRAVEDAD</h2>
+
+<p>El centro de gravedad (CG) es el punto geométrico de un cuerpo a través del cual pasa en todo momento la línea de acción de la resultante de todas las fuerzas gravitatorias distribuidas sobre cada partícula de masa elemental del sistema.</p>
+
+<p>Aunque en la práctica industrial suelen utilizarse indistintamente, existen diferencias de definición técnica:</p>
+<ul>
+<li><strong>Centro de gravedad (CG):</strong> Determinado por la distribución de las fuerzas gravitacionales en el volumen. Coincide exactamente con el centro de masa cuando el campo gravitatorio alrededor del objeto es uniforme.</li>
+<li><strong>Centro de masa (CM):</strong> Punto dependiente exclusivamente de la distribución espacial de la materia inercial del cuerpo, con total independencia de la presencia o ausencia de gravedad.</li>
+<li><strong>Centroide:</strong> Punto puramente geométrico correspondiente al centro medio de un área, línea o volumen, asumiendo una densidad homogénea.</li>
+</ul>
+
+<p>El concepto de centro de gravedad rige la estabilidad mecánica: un cuerpo situado sobre un plano permanecerá en equilibrio estable mientras la proyección vertical de su centro de gravedad caiga dentro de la superficie delimitada por su base de sustentación.</p>
 </section>
 
 <section id="tema9">
-  <span class="num">Módulo 09</span>
-  <h2>9. 📐 Formulario Técnico Resumido</h2>
 
-  <div class="formula-box">
-    <h3>Descomposición Ortogonal</h3>
-    <div class="formula">F<sub>x</sub> = F · cos(θ) &nbsp;|&nbsp; F<sub>y</sub> = F · sen(θ)</div>
-    <p><strong>Magnitud:</strong> R = √(F<sub>x</sub>² + F<sub>y</sub>²)</p>
-    <p><strong>Dirección:</strong> θ = arctan(F<sub>y</sub> / F<sub>x</sub>)</p>
-  </div>
+<span class="num">TEMA 09</span>
+<h2>9. 📐 FORMULARIO DE ESTÁTICA</h2>
 
-  <div class="formula-box">
-    <h3>Fuerza Gravitacional (Peso)</h3>
-    <div class="formula">W = m · g</div>
-    <p>g ≈ 9,81 m/s² (aceleración gravitatoria terrestre estándar).</p>
-  </div>
+<p>Compilación técnica de las expresiones analíticas y relaciones trigonométricas empleadas en el análisis de sistemas mecánicos y resolución de problemas de equilibrio estático.</p>
 
-  <div class="formula-box">
-    <h3>Momento Escalar (Torque)</h3>
-    <div class="formula">M<sub>O</sub> = ± F · d<sub>⊥</sub></div>
-    <p>Signo positivo para rotación antihoraria; negativo para horaria.</p>
-  </div>
+<div class="formula-box">
+<h3>⚡ Segunda Ley de Newton</h3>
+<div class="formula">F = m · a</div>
+<p><strong>F:</strong> fuerza resultante neta expresada en newtons (N)</p>
+<p><strong>m:</strong> masa inercial del cuerpo en kilogramos (kg)</p>
+<p><strong>a:</strong> vector de aceleración lineal (m/s²); en estática a = 0</p>
+</div>
 
-  <div class="formula-box">
-    <h3>Fricción de Coulomb</h3>
-    <div class="formula">f<sub>s</sub> ≤ μ<sub>s</sub> · N &nbsp;&nbsp;|&nbsp;&nbsp; f<sub>k</sub> = μ<sub>k</sub> · N</div>
-    <p>μ<sub>s</sub>: coeficiente estático; μ<sub>k</sub>: coeficiente cinético.</p>
-  </div>
+<div class="formula-box">
+<h3>🌎 Fuerza Gravitacional (Peso)</h3>
+<div class="formula">P = m · g</div>
+<p><strong>P:</strong> fuerza gravitacional o peso (N)</p>
+<p><strong>m:</strong> masa del objeto (kg)</p>
+<p><strong>g:</strong> aceleración local de la gravedad (≈ 9,81 m/s² a nivel del mar)</p>
+</div>
 
-  <div class="formula-box">
-    <h3>Centro de Gravedad / Masa Discreto</h3>
-    <div class="formula">x̄ = Σ(m<sub>i</sub> · x<sub>i</sub>) / Σm<sub>i</sub> &nbsp;&nbsp;|&nbsp;&nbsp; ȳ = Σ(m<sub>i</sub> · y<sub>i</sub>) / Σm<sub>i</sub></div>
-  </div>
+<div class="formula-box">
+<h3>⚖️ Primera Condición: Equilibrio de una Partícula</h3>
+<div class="formula">ΣFx = 0</div>
+<br>
+<div class="formula">ΣFy = 0</div>
+<p>Anulación neta de las componentes ortogonales de fuerzas concurrentes en dos dimensiones.</p>
+</div>
+
+<div class="formula-box">
+<h3>🧱 Equilibrio Total de un Cuerpo Rígido</h3>
+<div class="formula">ΣF = 0</div>
+<br>
+<div class="formula">ΣM = 0</div>
+<p>Garantía de reposo integral mediante la anulación de traslaciones y rotaciones angulares.</p>
+</div>
+
+<div class="formula-box">
+<h3>🔄 Momento Escalar de una Fuerza (Torque)</h3>
+<div class="formula">M = F · d</div>
+<p><strong>M:</strong> momento de fuerza resultante (N·m)</p>
+<p><strong>F:</strong> magnitud de la fuerza aplicada (N)</p>
+<p><strong>d:</strong> brazo de palanca o distancia perpendicular desde el eje a la línea de acción (m)</p>
+</div>
+
+<div class="formula-box">
+<h3>🛑 Fricción Cinética (Coulomb)</h3>
+<div class="formula">Fr = µk · N</div>
+<p><strong>µk:</strong> coeficiente adimensional de rozamiento cinético (deslizamiento activo)</p>
+<p><strong>N:</strong> fuerza normal ejercida perpendicularmente por la superficie (N)</p>
+</div>
+
+<div class="formula-box">
+<h3>✋ Fricción Estática Máxima</h3>
+<div class="formula">Fr(max) = µs · N</div>
+<p><strong>µs:</strong> coeficiente adimensional de rozamiento estático (resistencia previa al deslizamiento)</p>
+<p><strong>N:</strong> magnitud de la fuerza normal (N)</p>
+</div>
+
+<div class="formula-box">
+<h3>📐 Descomposición Vectorial de una Fuerza</h3>
+<div class="formula">Fx = F · cos(θ)</div>
+<br>
+<div class="formula">Fy = F · sen(θ)</div>
+<p>Cálculo de las componentes ortogonales respecto a un ángulo directriz θ respecto a la horizontal.</p>
+</div>
+
+<div class="formula-box">
+<h3>➡️ Módulo de la Fuerza Resultante</h3>
+<div class="formula">FR = √(Fx² + Fy²)</div>
+<p>Magnitud escalar resultante a partir de la composición de ejes rectangulares perpendiculares.</p>
+</div>
+
+<div class="formula-box">
+<h3>📍 Centro de Gravedad de un Sistema Discreto</h3>
+<div class="formula">xCG = Σ(mi · xi) / Σmi</div>
+<br>
+<div class="formula">yCG = Σ(mi · yi) / Σmi</div>
+<p>Coordenadas cartesianas del centro de distribución ponderada de masas puntuales.</p>
+</div>
+
+<div class="formula-box">
+<h3>📚 Glosario de Variables</h3>
+<ul>
+<li><strong>F:</strong> fuerza vectorial aplicada (N)</li>
+<li><strong>P:</strong> fuerza gravitatoria o peso del cuerpo (N)</li>
+<li><strong>m:</strong> masa escalar inercial (kg)</li>
+<li><strong>a:</strong> aceleración lineal (m/s²)</li>
+<li><strong>g:</strong> aceleración gravitatoria terrestre (m/s²)</li>
+<li><strong>N:</strong> fuerza normal o reacción de contacto perpendicular (N)</li>
+<li><strong>µs, µk:</strong> coeficientes de fricción estática y cinética (adimensionales)</li>
+<li><strong>M:</strong> momento de torsión o torque evaluado en un punto (N·m)</li>
+<li><strong>d:</strong> distancia perpendicular de palanca (m)</li>
+<li><strong>Σ:</strong> operador de sumatoria algebraica</li>
+<li><strong>θ:</strong> ángulo director respecto al eje de referencia (grados o radianes)</li>
+</ul>
+</div>
+
 </section>
 
 </main>
 
 <footer>
-  <p>Mecánica Vectorial para Ingenieros • Estática</p>
-  <p>Material estructurado para revisión académica y técnica</p>
+<p>⚙️ Temas de Estática • Mecánica Vectorial para Ingenieros</p>
+<p>Material estructurado para revisión académica y técnica</p>
 </footer>
 
 </body>
-</html>
+  </html>
+  
