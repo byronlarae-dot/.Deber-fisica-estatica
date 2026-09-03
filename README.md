@@ -1,0 +1,1 @@
+# .Deber-fisica-estatica
