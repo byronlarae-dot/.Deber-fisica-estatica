@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manual Técnico: Estática y Mecánica Vectorial</title>
+
+<style>
+*{box-sizing:border-box;scroll-behavior:smooth}
+
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:#090d16;
+  color:#e2e8f0;
+  line-height:1.7
+}
+
+header{
+  min-height:75vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:50px 20px;
+  background:radial-gradient(circle at 50% 20%, #1e1b4b, #090d16 80%)
+}
+
+.hero{max-width:850px}
+
+.badge{
+  display:inline-block;
+  border:1px solid #6366f1;
+  background:#6366f115;
+  border-radius:30px;
+  padding:6px 18px;
+  color:#a5b4fc;
+  font-size:0.85rem;
+  letter-spacing:1px;
+  font-weight:700;
+  margin-bottom:20px
+}
+
+h1{
+  font-size:clamp(2.4rem,6vw,4.5rem);
+  margin:0 0 16px;
+  color:#f8fafc;
+  line-height:1.15
+}
+
+.hero p{
+  font-size:1.15rem;
+  color:#94a3b8;
+  max-width:650px;
+  margin:0 auto 30px
+}
+
+.btn{
+  display:inline-block;
+  background:linear-gradient(135deg,#4f46e5,#06b6d4);
+  color:white;
+  text-decoration:none;
+  padding:14px 28px;
+  border-radius:12px;
+  font-weight:600;
+  transition:transform .2s ease;
+  box-shadow:0 8px 20px #4f46e530
+}
+
+.btn:hover{transform:translateY(-2px)}
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:#090d16cc;
+  border-bottom:1px solid #1e293b;
+  backdrop-filter:blur(12px);
+  padding:12px 16px
+}
+
+nav div{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  gap:10px;
+  overflow-x:auto
+}
+
+nav a{
+  color:#94a3b8;
+  text-decoration:none;
+  white-space:nowrap;
+  padding:8px 14px;
+  border-radius:8px;
+  font-size:0.9rem;
+  transition:all .2s
+}
+
+nav a:hover{
+  background:#1e293b;
+  color:#38bdf8
+}
+
+main{
+  max-width:980px;
+  margin:auto;
+  padding:40px 20px
+}
+
+.intro{
+  background:#0f172a;
+  border:1px solid #1e293b;
+  border-radius:16px;
+  padding:28px;
+  margin-bottom:30px
+}
+
+section{
+  background:#0f172a;
+  border:1px solid #1e293b;
+  border-radius:18px;
+  padding:32px;
+  margin:30px 0;
+  box-shadow:0 10px 30px #00000040
+}
+
+.num{
+  color:#38bdf8;
+  font-weight:700;
+  font-size:.85rem;
+  letter-spacing:1px;
+  text-transform:uppercase
+}
+
+h2{
+  margin:8px 0 16px;
+  font-size:1.75rem;
+  color:#f1f5f9
+}
+
+h3{color:#818cf8;margin-top:0}
+
+.formula{
+  display:inline-block;
+  background:#020617;
+  border-left:4px solid #38bdf8;
+  border-radius:6px;
+  padding:10px 18px;
+  margin:10px 0;
+  color:#38bdf8;
+  font-family:monospace;
+  font-size:1.15rem;
+  letter-spacing:0.5px
+}
+
+.formula-box{
+  background:#070d19;
+  border:1px solid #1e293b;
+  border-radius:12px;
+  padding:20px;
+  margin:20px 0
+}
+
+.formula-box p{margin:6px 0;color:#cbd5e1}
+
+.callout{
+  background:#1e1b4b30;
+  border-left:3px solid #818cf8;
+  padding:12px 18px;
+  margin:16px 0;
+  border-radius:0 8px 8px 0;
+  font-size:0.95rem;
+  color:#c7d2fe
+}
+
+ul{padding-left:20px;color:#cbd5e1}
+li{margin-bottom:6px}
+
+footer{
+  text-align:center;
+  padding:40px 20px;
+  color:#64748b;
+  border-top:1px solid #1e293b;
+  margin-top:40px
+}
+
+@media(max-width:600px){
+  section{padding:22px}
+  h1{font-size:2.2rem}
+  h2{font-size:1.4rem}
+}
+</style>
+</head>
+
+<body>
+
+<header id="inicio">
+  <div class="hero">
+    <div class="badge">FÍSICA NEWTONIANA • MECÁNICA VECTORIAL</div>
+    <h1>Estática y Equilibrio</h1>
+    <p>Compendio técnico de leyes fundamentales, análisis vectorial de fuerzas, momentos y condiciones de equilibrio rígido.</p>
+    <a class="btn" href="#temas">Explorar Conceptos</a>
+  </div>
+</header>
+
+<nav>
+  <div>
+    <a href="#inicio">Inicio</a>
+    <a href="#tema1">1. Estática</a>
+    <a href="#tema2">2. Leyes de Newton</a>
+    <a href="#tema3">3. Fuerza y Peso</a>
+    <a href="#tema4">4. Acción y Reacción</a>
+    <a href="#tema5">5. Fricción</a>
+    <a href="#tema6">6. Partícula</a>
+    <a href="#tema7">7. Cuerpo Rígido</a>
+    <a href="#tema8">8. Centro de Gravedad</a>
+    <a href="#tema9">9. Formulario</a>
+  </div>
+</nav>
+
+<main id="temas">
+
+<div class="intro">
+  <h2>📘 Fundamento Teórico</h2>
+  <p>Este recurso compila el análisis vectorial de sistemas en reposo y en velocidad rectilínea uniforme, basado en los estándares clásicos de Beer & Johnston y Halliday-Resnick.</p>
+</div>
+
+<section id="tema1">
+  <span class="num">Módulo 01</span>
+  <h2>1. Naturaleza de la Estática</h2>
+  <p>La estática es la rama de la mecánica clásica que estudia el estado de equilibrio de los cuerpos bajo la acción de fuerzas exteriores. Se define que un sistema se encuentra en <strong>equilibrio mecánico</strong> cuando su aceleración lineal y su aceleración angular son estrictamente nulas:</p>
+  
+  <div class="formula">a = 0 &nbsp;|&nbsp; α = 0</div>
+
+  <p>Esto engloba dos escenarios:</p>
+  <ul>
+    <li><strong>Equilibrio estático:</strong> El cuerpo permanece en reposo absoluto respecto a un marco de referencia inercial.</li>
+    <li><strong>Equilibrio dinámico:</strong> El cuerpo se desplaza en línea recta a velocidad constante ($v = \text{cte}$).</li>
+  </ul>
+  <p>Su herramienta indispensable es el <strong>Diagrama de Cuerpo Libre (DCL)</strong>, que aísla el cuerpo eliminando soportes y reemplazándolos por sus correspondientes fuerzas y reacciones vectoriales.</p>
+</section>
+
+<section id="tema2">
+  <span class="num">Módulo 02</span>
+  <h2>2. Fundamentación Newtoniana</h2>
+  <p>Las tres leyes enunciadas por Sir Isaac Newton en 1687 sustentan todo el análisis mecánico:</p>
+  <ul>
+    <li><strong>Primera Ley (Ley de Inercia):</strong> Todo cuerpo persevera en su estado de reposo o movimiento rectilíneo uniforme a menos que sea obligado a cambiar su estado por fuerzas netas aplicadas sobre él ($\Sigma \vec{F} = 0 \implies \vec{v} = \text{cte}$).</li>
+    <li><strong>Segunda Ley (Ley Fundamental de la Dinámica):</strong> La aceleración que adquiere un cuerpo es directamente proporcional a la fuerza neta aplicada e inversamente proporcional a su masa inercial ($\Sigma \vec{F} = m \cdot \vec{a}$). En estática, dado que $\vec{a} = 0$, esta ley converge a la Primera Ley.</li>
+    <li><strong>Tercera Ley (Principio de Acción y Reacción):</strong> A toda acción se opone siempre una reacción igual y contraria. Las fuerzas son interacciones mutuas y jamás existen de forma aislada.</li>
+  </ul>
+</section>
+
+<section id="tema3">
+  <span class="num">Módulo 03</span>
+  <h2>3. Dinámica de Fuerzas: Masa vs. Peso</h2>
+  <p>Una <strong>fuerza</strong> es una magnitud vectorial caracterizada por un punto de aplicación, magnitud, dirección y sentido, medida en newtons ($1\text{ N} = 1\text{ kg}\cdot\text{m/s}^2$).</p>
+  
+  <div class="callout">
+    <strong>Diferenciación crítica:</strong> La <em>masa</em> ($m$) es una propiedad escalar e invariable que mide la inercia de la materia (en kg). El <em>peso</em> ($\vec{W}$ o $\vec{P}$) es la fuerza gravitacional ejercida sobre dicha masa, variando según la posición espacial y la altitud.
+  </div>
+
+  <div class="formula">\vec{W} = m \cdot \vec{g}</div>
+  <p>Donde $\vec{g} \approx 9,80665\text{ m/s}^2$ al nivel del mar. La línea de acción del peso se proyecta verticalmente hacia el centro de gravedad del planeta.</p>
+</section>
+
+<section id="tema4">
+  <span class="num">Módulo 04</span>
+  <h2>4. Principio de Acción y Reacción en Estática</h2>
+  <p>El principio de interacción impone dos condiciones estrictas para los pares de acción y reacción:</p>
+  <ul>
+    <li>Poseen exactamente la misma magnitud y línea de acción, pero sentidos opuestos ($\vec{F}_{AB} = -\vec{F}_{BA}$).</li>
+    <li><strong>Actúan sobre cuerpos distintos:</strong> Razón por la cual nunca se anulan entre sí dentro del DCL de un solo cuerpo.</li>
+  </ul>
+  <p>Por ejemplo, la fuerza Normal ($N$) sobre una mesa no es la reacción al peso del objeto (el par del peso está en el núcleo terrestre), sino la reacción a la compresión mecánica que el objeto ejerce sobre la superficie de la mesa.</p>
+</section>
+
+<section id="tema5">
+  <span class="num">Módulo 05</span>
+  <h2>5. Tribología: Fricción Seca (Modelo de Coulomb)</h2>
+  <p>La resistencia tangencial entre dos superficies rugosas en contacto se divide en dos regímenes:</p>
+  
+  <p><strong>1. Fricción Estática ($f_s$):</strong> Fuerza de autoajuste que equilibra la fuerza aplicada mientras no haya deslizamiento. Su valor es una desigualdad:</p>
+  <div class="formula">f_s \le \mu_s \cdot N</div>
+  <p>El valor máximo antes del movimiento inminente es $f_{s,\max} = \mu_s \cdot N$.</p>
+
+  <p><strong>2. Fricción Cinética ($f_k$):</strong> Actúa una vez iniciado el deslizamiento relativo:</p>
+  <div class="formula">f_k = \mu_k \cdot N</div>
+  <p>Generalmente, $\mu_s > \mu_k$ debido a que romper las uniones microscópicas iniciales requiere mayor esfuerzo que mantener el deslizamiento.</p>
+</section>
+
+<section id="tema6">
+  <span class="num">Módulo 06</span>
+  <h2>6. Equilibrio de una Partícula</h2>
+  <p>Una partícula es un cuerpo cuyas dimensiones espaciales son despreciables frente a la escala del problema; por ello, <strong>no experimenta rotación</strong>. La única condición necesaria es el equilibrio de traslación:</p>
+  <div class="formula">\Sigma \vec{F} = \vec{0}</div>
+
+  <p>En el plano bidimensional ($xy$):</p>
+  <div class="formula">\Sigma F_x = 0 \qquad \Sigma F_y = 0</div>
+  <p>Gráficamente, el polígono vectorial cerrado formado por todas las fuerzas aplicadas garantiza el equilibrio concurrente.</p>
+</section>
+
+<section id="tema7">
+  <span class="num">Módulo 07</span>
+  <h2>7. Equilibrio del Cuerpo Rígido</h2>
+  <p>Un cuerpo rígido no se deforma bajo la acción de cargas externas. Para garantizar su reposo total, deben satisfacerse simultáneamente dos condiciones:</p>
+  
+  <p><strong>Primera Condición (Traslacional):</strong></p>
+  <div class="formula">\Sigma \vec{F} = \vec{0}</div>
+  
+  <p><strong>Segunda Condición (Rotacional):</strong></p>
+  <div class="formula">\Sigma \vec{M}_O = \vec{0}</div>
+  
+  <p>Donde $\vec{M}_O$ es el <strong>momento de fuerza o torque</strong> respecto a un punto $O$, definido por el producto vectorial:</p>
+  <div class="formula">\vec{M}_O = \vec{r} \times \vec{F}</div>
+  <p>Escalarmente: $M = F \cdot d$, donde $d$ es el brazo de palanca (distancia perpendicular). Por convención habitual: giros antihorarios (+) y giros horarios (-).</p>
+</section>
+
+<section id="tema8">
+  <span class="num">Módulo 08</span>
+  <h2>8. Centro de Gravedad, Centro de Masa y Centroide</h2>
+  <ul>
+    <li><strong>Centro de Gravedad (CG):</strong> Punto de aplicación de la resultante de todas las fuerzas gravitatorias que actúan sobre las masas elementales del cuerpo.</li>
+    <li><strong>Centro de Masa (CM):</strong> Punto geométrico donde se concentra toda la inercia del sistema ($\vec{r}_{CM} = \frac{\Sigma m_i \vec{r}_i}{\Sigma m_i}$). Si el campo gravitacional es uniforme, el CG coincide exactamente con el CM.</li>
+    <li><strong>Centroide:</strong> Punto puramente geométrico (centro de un área o volumen), independiente de la masa o la gravedad.</li>
+  </ul>
+  <p><strong>Criterio de Estabilidad:</strong> Un cuerpo rígido no vuelca mientras la línea de acción vertical que desciende de su CG cruce dentro del polígono delimitado por su base de sustentación.</p>
+</section>
+
+<section id="tema9">
+  <span class="num">Módulo 09</span>
+  <h2>9. 📐 Formulario Técnico Resumido</h2>
+
+  <div class="formula-box">
+    <h3>Descomposición Ortogonal</h3>
+    <div class="formula">F_x = F \cdot \cos(\theta) &nbsp;|&nbsp; F_y = F \cdot \sin(\theta)</div>
+    <p><strong>Magnitud:</strong> $R = \sqrt{F_x^2 + F_y^2}$</p>
+    <p><strong>Dirección:</strong> $\theta = \arctan\left(\frac{F_y}{F_x}\right)$</p>
+  </div>
+
+  <div class="formula-box">
+    <h3>Fuerza Gravitacional (Peso)</h3>
+    <div class="formula">W = m \cdot g</div>
+    <p>$g = 9,81\text{ m/s}^2$ (aceleración gravitatoria terrestre estándar).</p>
+  </div>
+
+  <div class="formula-box">
+    <h3>Momento Escalar (Torque)</h3>
+    <div class="formula">M_O = \pm F \cdot d_\perp</div>
+    <p>Signo positivo para rotación antihoraria; negativo para horaria.</p>
+  </div>
+
+  <div class="formula-box">
+    <h3>Fricción de Coulomb</h3>
+    <div class="formula">f_s \le \mu_s \cdot N \qquad f_k = \mu_k \cdot N</div>
+    <p>$\mu_s$: coeficiente estático; $\mu_k$: coeficiente cinético.</p>
+  </div>
+
+  <div class="formula-box">
+    <h3>Centro de Gravedad / Masa Discreto</h3>
+    <div class="formula">\bar{x} = \frac{\Sigma (m_i \cdot x_i)}{\Sigma m_i} \qquad \bar{y} = \frac{\Sigma (m_i \cdot y_i)}{\Sigma m_i}</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Mecánica Vectorial para Ingenieros • Estática</p>
+  <p>Material estructurado para revisión académica y técnica</p>
+</footer>
+
+</body>
+  </html>
+  
